@@ -7,6 +7,9 @@ on:
 
 permissions:
   contents: read
+  pages: write
+  id-token: write
+  
 
 concurrency:
   group: github-pages
@@ -30,7 +33,7 @@ jobs:
 
       - name: Extract, build and test project
         run: |
-          unzip -q dames-webapp-github-pages.zip -d app
+          unzip -q "dames-webapp-github-pages (1).zip" -d app
           cd app
           npm ci
           npm test
